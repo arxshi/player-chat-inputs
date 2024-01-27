@@ -164,7 +164,7 @@ public class PlayerChatInput<T> implements Listener {
 		this.onDisconnect = onDisconnect;
 	}
 
-	@EventHandler
+	@EventHandler(priority = EventPriority.LOWEST)
 	public void onPlayerChatEvent(AsyncPlayerChatEvent e) {
 		if (!player.getUniqueId().equals(e.getPlayer().getUniqueId()))
 			return;
